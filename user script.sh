@@ -20,7 +20,7 @@ cat badusers
 rm diff3
 echo delete all? y/n
 read delete
-if [ "$y" = "$delete" ]
+if [ "y" = "$delete" ]
 then
 
 for i in $( cat badusers ); do
