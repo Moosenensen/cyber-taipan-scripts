@@ -16,6 +16,7 @@ rm diff3
 diff cuser.txt users.txt | grep '^[<]' >> diff3
 rm badusers
 sed 's/< //g' diff3 >> badusers
+echo users to be deleted:
 cat badusers
 rm diff3
 echo delete all? y/n
