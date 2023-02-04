@@ -13,6 +13,7 @@ rm diff2
 for i in $( cat newusers ); do
 useradd $i
 echo $i:CyberTaipan123! | chpasswd
+echo "added user $i"
 done
 
 #finds all the names that are in current users but not user.txt
@@ -30,5 +31,6 @@ then
 #deletes users
 for i in $( cat badusers ); do
 sudo userdel $i
+echo "deleted user $i"
 	done
 fi
