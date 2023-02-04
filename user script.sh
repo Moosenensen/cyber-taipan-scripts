@@ -2,12 +2,12 @@
 rm cuser.txt
 #gets current users
 getent passwd | awk -F: '$3 >= 1000 {print $1}' >> cuser.txt
-
+sed 's/> //g' users.txt >> users.txt
 # finds the users that are in users.txt but not in current users
 rm diff2
 diff cuser.txt users.txt | grep '^[>]' >> diff2
 rm newusers
-sed 's/> //g' diff2 >> newusers
+sed 's/> //g' diff2 > newusers
 rm diff2
 #loops through and adds a user with the content of every line
 for i in $( cat newusers ); do
