@@ -16,6 +16,7 @@ rm badadmin
 rm badadmin2
 diff admin2 cadmin | grep '^[> ]' >> badadmin
 sed 's/> //g' badadmin >> badadmin2
+rm badadmin
 for i in $( cat badadmin2 ); do
 sudo deluser $i sudo
 done
