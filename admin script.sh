@@ -2,11 +2,13 @@ rm cadmin
 getent group sudo | cut -d: -f4 | tr ',' '\n' >> cadmin
 rm admin2
 sed 's/ //g' admin >> admin2
+
 rm admin
 rm newadmin
 diff admin2 cadmin | grep '^[< ]' >> newadmin
 rm newadmin2
 sed 's/< //g' newadmin >> newadmin2
+
 rm newadmin
 for i in $( cat newadmin2 ); do
 sudo usermod -aG sudo $i
