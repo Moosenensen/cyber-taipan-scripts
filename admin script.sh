@@ -1,5 +1,5 @@
 rm cadmin
-getent group sudo | cut -d: -f4 >> cadmin
+getent group sudo | cut -d: -f4 | tr ',' '\n' >> cadmin
 rm admin2
 sed 's/ //g' admin >> admin2
 rm newadmin
