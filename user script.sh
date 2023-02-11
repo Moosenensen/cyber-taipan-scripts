@@ -3,7 +3,7 @@ rm cuser.txt
 rm wuser.txt
 #gets current users
 getent passwd | awk -F: '$3 >= 1000 {print $1}' >> wuser.txt
-sed 's/ //g' wuser.txt >> cusers.txt
+sed 's/ //g' wuser.txt >> cuser.txt
 # finds the users that are in users.txt but not in current users
 rm diff2
 diff cuser.txt users.txt | grep '^[>]' >> diff2
