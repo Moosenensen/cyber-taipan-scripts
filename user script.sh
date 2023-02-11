@@ -1,6 +1,9 @@
 # the removes are to make sure the file doesnt alreeady exist
 rm cuser.txt
 rm wuser.txt
+sed 's/ //g' users.txt >> users2.txt
+rm users.txt
+sed 's/ //g' users2.txt >> users.txt
 #gets current users
 getent passwd | awk -F: '$3 >= 1000 {print $1}' >> wuser.txt
 sed 's/ //g' wuser.txt >> cuser.txt
