@@ -3,15 +3,15 @@ rm cuser.txt
 rm wuser.txt
 sed 's/ //g' users.txt >> users2.txt
 rm users.txt
-sed 's/ //g' users2.txt >> users.txt
+sort users2.txt >>users.txt
 rm users2.txt
 #gets current users
-getent passwd | awk -F: '$3 >= 1000 {print $1}' >> wuser.txt
-sed 's/ //g' wuser.txt >> cuser.txt
+getent passwd | awk -F: '$3 >= 1000 {print $1}' >> cuser2.txt
+sort cuser2.txt >> cuser.txt
+rm cuser2.txt
 # finds the users that are in users.txt but not in current users
+
 rm diff2
-sort cuser.txt
-sort users.txt
 diff cuser.txt users.txt | grep '^[>]' >> diff2
 rm newusers
 sed 's/> //g' diff2 >> newusers
