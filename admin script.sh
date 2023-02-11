@@ -5,6 +5,8 @@ sed 's/ //g' admin >> admin2
 
 rm admin
 rm newadmin
+sort admin2
+sort cadmin
 diff admin2 cadmin | grep '^[< ]' >> newadmin
 rm newadmin2
 sed 's/< //g' newadmin >> newadmin2

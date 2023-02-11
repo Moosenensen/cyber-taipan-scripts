@@ -10,6 +10,8 @@ getent passwd | awk -F: '$3 >= 1000 {print $1}' >> wuser.txt
 sed 's/ //g' wuser.txt >> cuser.txt
 # finds the users that are in users.txt but not in current users
 rm diff2
+sort cuser.txt
+sort users.txt
 diff cuser.txt users.txt | grep '^[>]' >> diff2
 rm newusers
 sed 's/> //g' diff2 >> newusers
