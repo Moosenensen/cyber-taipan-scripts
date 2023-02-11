@@ -1,8 +1,8 @@
 # the removes are to make sure the file doesnt alreeady exist
 rm cuser.txt
-rm users.txt
+rm wuser.txt
 #gets current users
-getent passwd | awk -F: '$3 >= 1000 {print $1}' >> cuser.txt
+getent passwd | awk -F: '$3 >= 1000 {print $1}' >> wuser.txt
 sed 's/ //g' wusers.txt >> users.txt
 # finds the users that are in users.txt but not in current users
 rm diff2
