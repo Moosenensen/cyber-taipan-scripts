@@ -1,4 +1,6 @@
 # the removes are to make sure the file doesnt alreeady exist
+# users.txt
+#
 rm cuser.txt
 rm wuser.txt
 sed 's/ //g' users.txt >> users2.txt
