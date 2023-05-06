@@ -2,3 +2,118 @@ ports
 firwalls stuff
 add log output
 pam password access manager
+logs
+cis control
+aslr
+net.ipv4
+permisions
+config services:
+ssh
+webservers, samba ftp
+
+
+apt instal debsums
+touch differences.log
+pushd /tmp
+for FILE in $(debsums -ca);
+    do echo $FILE >> /home/$mainUser/Desktop/differences.log;
+    PKG=$(dpkg -S $FILE | cut -d: -f1);
+    diff <(apt-get download $PKG;dpkg-deb --fsys-tarfile $PKG*.deb | tar xOf - .$FILE) $FILE | tee -a /home/$mainUser/Desktop/differences.log;
+    echo "" >> /home/$mainUser/Desktop/differences.log
+done
+popd
+echo "Outputted every change on the system since installation - this log is a must-check."
+clear
+
+
+apt purge
+
+netcat
+netcat-openbsd
+minetest
+xscape
+kbind
+proxychains
+doona
+wesnoth
+manaplus
+ptunnel
+gameconqueror
+netcat-traditional
+gcc
+bleachbit
+g++
+beep
+whoopsie
+rsync
+rsh
+apport*
+avahi
+autofs
+pastebinit
+popularity-contest
+yp-tools
+ypbind
+qbittorrent
+ncat
+pompem
+sqlmap
+pnetcat
+socat
+freeciv*
+sock
+squid
+socket
+sbd
+transmission*
+transmission
+transmission-daemon
+deluge
+yersinia
+nis
+rsh-client
+talk
+ldap-utils
+john
+john-data
+hydra
+hydra-gtk
+aircrack-ng
+fcrackzip
+lcrack
+ophcrack
+ophcrack-cli
+pdfcrack
+pyrit
+rarcrack
+sipcrack
+irpas
+wireshark*
+tshark
+kismet
+zenmap
+nmap
+wireguard
+*torrent
+openvpn
+logkeys
+zeitgeist-core
+zeitgeist-datahub
+python-zeitgeist
+rhythmbox-plugin-zeitgeist
+zeitgeist
+nfs-kernel-server
+nfs-common
+portmap
+rpcbind
+autofs
+nginx
+nginx-common
+inetd
+openbsd-inetd
+xinetd
+inetutils-*
+*vnc*
+vtgrab
+snmp
+snmpd
