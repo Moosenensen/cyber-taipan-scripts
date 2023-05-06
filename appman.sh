@@ -45,7 +45,11 @@ grep -v "python" installed > tmpfile && mv tmpfile installed
 rm tmpfile
 grep -v "linux" installed > tmpfile && mv tmpfile installed
 rm tmpfile
+grep -v "ubuntu" installed > tmpfile && mv tmpfile installed
+rm tmpfile
 grep -v "language" installed > tmpfile && mv tmpfile installed
+rm tmpfile
+grep -v "php8" installed > tmpfile && mv tmpfile installed
 rm tmpfile
 
 #find diff
