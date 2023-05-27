@@ -10,6 +10,7 @@ permisions
 config services:
 ssh
 webservers, samba ftp
+group adder
 
 
 apt instal debsums

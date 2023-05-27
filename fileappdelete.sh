@@ -6,3 +6,4 @@ find /home -regextype posix-extended -regex '.*\.(tiff|tif|rs|iml|gif|jpeg|exe|t
 wget https://raw.githubusercontent.com/Moosenensen/cyber-taipan-scripts/main/badapps.txt
 for i in $(cat badapps.txt); do
 sudo apt purge $i
+sudo apt-get autoremove
