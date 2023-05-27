@@ -105,9 +105,9 @@ rm /home/ubuntu/Desktop/addadmin.txt
 rm /home/ubuntu/Desktop/removeadmin.txt
 rm /home/ubuntu/Desktop/addthese.txt
 rm /home/ubuntu/Desktop/removethese.txt
-rm /home/ubuntu/Desktop/authorizedusers.txt
-rm /home/ubuntu/Desktop/authorizedadmin.txt
+
 rm /home/ubuntu/Desktop/currentusers.txt
 rm /home/ubuntu/Desktop/currentadmin.txt
 rm /home/ubuntu/Desktop/diffusers.txt
+rm /home/ubuntu/Desktop/diffadmin
 exit 0
