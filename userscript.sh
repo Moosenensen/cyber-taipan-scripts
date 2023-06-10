@@ -13,10 +13,12 @@ if test -f "users.txt"; then
 else
     echo "use users.txt idiot"
     echo >> users.txt
+    echo "You Shouldn't be in the competition. L Bozo"
     exit
 fi
 if test -f "admin.txt"; then
     echo "starting script"
+    echo "You Shouldn't be in the competition. L Bozo"
 else
     echo "use admin.txt idiot"
     echo >> admin.txt
