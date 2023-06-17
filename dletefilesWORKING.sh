@@ -52,7 +52,7 @@ fi
 if [[ "$photos" = true ]]; then
   cd /home
   # Search for audio files and store them in an array
-  image_files=$(find /home -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.ico" -o -iname "*.svg" -o -iname "*.webp" -o -iname "*.raw" -o -iname "*.cr2" -o -iname "*.nef" -o -iname "*.pef" -o -iname "*.arw" -o -iname "*.rw2" -o -iname "*.dng" -o -iname "*.orf" -o -iname "*.srw" -o -iname "*.3fr" -o -iname "*.raf" -o -iname "*.mrw" -o -iname "*.mef" -o -iname "*.psd" -o -iname "*.ai" -o -iname "*.eps" \) -not -path "/home/*/snap/*" -not -path "/home/*/.cache/*")
+  find /home -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.ico" -o -iname "*.svg" -o -iname "*.webp" -o -iname "*.raw" -o -iname "*.cr2" -o -iname "*.nef" -o -iname "*.pef" -o -iname "*.arw" -o -iname "*.rw2" -o -iname "*.dng" -o -iname "*.orf" -o -iname "*.srw" -o -iname "*.3fr" -o -iname "*.raf" -o -iname "*.mrw" -o -iname "*.mef" -o -iname "*.psd" -o -iname "*.ai" -o -iname "*.eps" \) ! -path "/home/*/snap/*" ! -path "/home/*/.cache/*"
 
 
 
