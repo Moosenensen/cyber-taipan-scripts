@@ -1,6 +1,16 @@
 #regex. posix- extend -regextype find command
-
 #!/bin/bash
+
+echo "Delete Music? [y/n] "
+read response
+if [["$response" == "y"]]; then
+music=True
+fi
+echo "Delete Photos? "
+
+echo "Delete Videos? "
+
+
 
 cd /home
 # Search for audio files and store them in an array
