@@ -4,3 +4,8 @@ find /home -regextype posix-extended -regex '.*\.(tiff|tif|rs|iml|gif|jpeg|exe|t
 grep -v "sci" soundfiles.txt >> soundfiles.txt 
 grep -v "sci" videofiles.txt >> videofiles.txt
 grep -v "sci" imgfiles.txt >> imgfiles.txt
+
+
+for i in $( cat videofiles.txt); do
+rm $i
+done
