@@ -1,10 +1,10 @@
 #first entry is a name
-hasgroup=false
+hasgroup=0
 for i in $(cat groups.txt); do
     #assume that name is added
-    addedgroup=false
+    addedgroup=0
     #check if $i is on the first entry or the entry after a :
-    if [[ $hasgroup == false ]]; then
+    if [[ $hasgroup == 0 ]]; then
         #records the group name between iterations
         groupname=$i
         #makes the group
@@ -16,11 +16,11 @@ for i in $(cat groups.txt); do
         addedgroup=true
     fi
     #checks if this iteration added a group
-    if [[ $addedgroup == false ]]; then
+    if [[ $addedgroup == 0 ]]; then
         #checks if this line is a colon
         if [[ $i = ":" ]]; then
             #sets the next iteration to be a group name
-            hasgroup=false
+            hasgroup=0
         else
             #adds the user
             usermod -a -G "$groupname" "$i"
