@@ -2,10 +2,14 @@
 # SECTION 0
 # CREATING BACKUPS
 mkdir backups
+cp /etc/login.defs backups/loginBACKUPS.defs
 # SECTION 0.1 
 # CHECKING THE DIRECTORY 
 current_directory=$(basename "$(pwd)")
-if ["$current_directory" == "Desktop"]
+if ["$current_directory" != "Desktop"]; then 
+  echo "Run this script in the desktop directory."
+  exit 0 
+fi 
 # SECTION 1
 # CHANGES PASS_MAX_DAYS TO 30
 w="30";file="/etc/login.defs";f="7"
