@@ -11,6 +11,7 @@ if ["$current_directory" != "Desktop"]; then
   echo "Run this script in the desktop directory."
   exit 0 
 fi 
+
 # SECTION 1
 # CHANGES PASS_MAX_DAYS TO 30
 w="30";file="/etc/login.defs";f="7"
@@ -26,4 +27,5 @@ echo "PASS_MIN_DAYS changed to 7."
 # EDITING THE COMMON-PASSWORD FILE
 nl="password [success=1 default=ignore] pam_unix.so obscure sha512 minlen=14 minclass=4 maxrepeat=7 lcredit=1 ocredit=1 ucredit=1 dcredit=1 difok=5 remember=6"
 sed -i '1s/^[^#]*$/'"$n1"'/' /etc/pam.d/common-password
+echo "Secure COMMON-PASSWORD settings have been set."
 
