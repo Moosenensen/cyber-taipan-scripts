@@ -10,8 +10,10 @@ current_directory=$(basename "$(pwd)")
 if ["$current_directory" != "Desktop"]; then 
   echo "Run this script in the desktop directory."
   exit 0 
-fi 
-
+elif [[ $EUID -ne 0 ]]
+  echo "This script must be run as root."
+  exit 0 
+fi
 # SECTION 1
 # CHANGES PASS_MAX_DAYS TO 30
 w="30";file="/etc/login.defs";f="7"
