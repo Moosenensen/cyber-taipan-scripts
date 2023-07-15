@@ -12,7 +12,7 @@ echo "Delete Photos? "
   if [[ "$response" = "y" ]]; then
     photos=1
 fi
-
+#wow
 echo "Delete Videos? "
   read response
   if [[ "$response" = "y" ]]; then
@@ -108,6 +108,8 @@ if [[ "$video" = 1 ]]; then
       for file in "${video_files[@]}"; do
         rm $file
       done
+    else;
+      
     fi
   fi
 fi

@@ -1,4 +1,3 @@
-install apache
-libapache-mod-security-2
+install apache libapache-mod-security-2
 rewirte engine
 sss protection
