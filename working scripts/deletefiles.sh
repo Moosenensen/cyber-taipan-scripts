@@ -1,6 +1,7 @@
 #regex. posix- extend -regextype find command
 #!/bin/bash
 #TODO: Fix Find command
+#finds text files music files and video files and provides an option to delete them
 echo "Delete Music? [y/n] "
   read response
   if [[ "$response" = "y" ]]; then
@@ -35,6 +36,7 @@ if [[ "$music" = 1 ]]; then
     echo "Found audio files:"
    for file in "${audio_files[@]}"; do
       echo "$file"
+      echo "$file" > deletedfiles.txt
     done
 
     # Ask for confirmation to delete files
@@ -54,9 +56,6 @@ if [[ "$photos" = 1 ]]; then
   # Search for audio files and store them in an array
   find /home -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.ico" -o -iname "*.svg" -o -iname "*.webp" -o -iname "*.raw" -o -iname "*.cr2" -o -iname "*.nef" -o -iname "*.pef" -o -iname "*.arw" -o -iname "*.rw2" -o -iname "*.dng" -o -iname "*.orf" -o -iname "*.srw" -o -iname "*.3fr" -o -iname "*.raf" -o -iname "*.mrw" -o -iname "*.mef" -o -iname "*.psd" -o -iname "*.ai" -o -iname "*.eps" \) ! -path "/home/*/snap/*" ! -path "/home/*/.cache/*"
 
-
-
-
   # Check if any image files were found
   if [[ ${image_files[@]} -eq 0 ]]; then
     echo "No image files found."
@@ -67,6 +66,7 @@ if [[ "$photos" = 1 ]]; then
     echo "Found image files:"
    for file in "${image_files[@]}"; do
       echo "$file"
+      echo "$file" > deletedfiles.txt
     done
 
     # Ask for confirmation to delete files
@@ -80,6 +80,8 @@ if [[ "$photos" = 1 ]]; then
     fi
   fi
 fi
+
+
 
 if [[ "$video" = 1 ]]; then
   cd /home
@@ -98,6 +100,7 @@ if [[ "$video" = 1 ]]; then
     echo "Found imvideoage files:"
    for file in "${video_files[@]}"; do
       echo "$file"
+      echo "$file" > deletedfiles.txt
     done
 
     # Ask for confirmation to delete files
