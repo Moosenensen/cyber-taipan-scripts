@@ -23,7 +23,7 @@ fi
 if [[ "$music" = 1 ]]; then
   cd /home
   # Search for audio files and store them in an array
-  audio_files=($(find /home -type f \( -name "*.3gp" -o -name "*.aa" -o -name "*.aac" -o -name "*.aax" -o -name "*.act" -o -name "*.aiff" -o -name "*.alac" -o -name "*.amr" -o -name "*.ape" -o -name "*.au" -o -name "*.awb" -o -name "*.dss" -o -name "*.dvf" -o -name "*.flac" -o -name "*.gsm" -o -name "*.iklax" -o -name "*.ivs" -o -name "*.m4a" -o -name "*.m4b" -o -name "*.m4p" -o -name "*.mmf" -o -name "*.movpkg" -o -name "*.mp3" -o -name "*.mpc" -o -name "*.msv" -o -name "*.nmf" -o -name "*.ogg" -o -name "*.opus" -o -name "*.ra" -o -name "*.raw" -o -name "*.rf64" -o -name "*.sln" -o -name "*.tta" -o -name "*.voc" -o -name "*.vox" -o -name "*.wav" -o -name "*.wma" -o -name "*.wv" -o -name "*.webm" -o -name "*.8svx" -o -name "*.cda" -o -name "*.oga" -o -name "*.mogg" -o -name "*.rm" \))) -not -path "/home/*/snap/*" -not -path "/home/*/.cache/*"
+  audio_files=($(find /home -type f \( -name "*.3gp" -o -name "*.aa" -o -name "*.aac" -o -name "*.aax" -o -name "*.act" -o -name "*.aiff" -o -name "*.alac" -o -name "*.amr" -o -name "*.ape" -o -name "*.au" -o -name "*.awb" -o -name "*.dss" -o -name "*.dvf" -o -name "*.flac" -o -name "*.gsm" -o -name "*.iklax" -o -name "*.ivs" -o -name "*.m4a" -o -name "*.m4b" -o -name "*.m4p" -o -name "*.mmf" -o -name "*.movpkg" -o -name "*.mp3" -o -name "*.mpc" -o -name "*.msv" -o -name "*.nmf" -o -name "*.ogg" -o -name "*.opus" -o -name "*.ra" -o -name "*.raw" -o -name "*.rf64" -o -name "*.sln" -o -name "*.tta" -o -name "*.voc" -o -name "*.vox" -o -name "*.wav" -o -name "*.wma" -o -name "*.wv" -o -name "*.webm" -o -name "*.8svx" -o -name "*.cda" -o -name "*.oga" -o -name "*.mogg" -o -name "*.rm" \))) ! -path "/home/*/snap/*" ! -path "/home/*/.cache/*"
 
 
   # Check if any audio files were found
@@ -86,7 +86,7 @@ fi
 if [[ "$video" = 1 ]]; then
   cd /home
   # Search for video files and store them in an array
-  video_files=$(find /home -type f \( -name "*.mp4" -o -name "*.mkv" -o -name "*.avi" -o -name "*.mov" -o -name "*.wmv" -o -name "*.flv" -o -name "*.webm" -o -name "*.mpeg" -o -name "*.mpg" -o -name "*.3gp" -o -name "*.ogg" -o -name "*.ogv" -o -name "*.qt" -o -name "*.vob" -o -name "*.m4v" -o -name "*.mp2" -o -name "*.mpv" -o -name "*.mts" -o -name "*.m2ts" -o -name "*.mxf" \)) -not -path "/home/*/snap/*" -not -path "/home/*/.cache/*"
+  video_files=$(find /home -type f \( -name "*.mp4" -o -name "*.mkv" -o -name "*.avi" -o -name "*.mov" -o -name "*.wmv" -o -name "*.flv" -o -name "*.webm" -o -name "*.mpeg" -o -name "*.mpg" -o -name "*.3gp" -o -name "*.ogg" -o -name "*.ogv" -o -name "*.qt" -o -name "*.vob" -o -name "*.m4v" -o -name "*.mp2" -o -name "*.mpv" -o -name "*.mts" -o -name "*.m2ts" -o -name "*.mxf" \)) ! -path "/home/*/snap/*" ! -path "/home/*/.cache/*"
 
 
 
