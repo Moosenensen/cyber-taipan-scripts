@@ -24,5 +24,6 @@ sed -i "${h}s/[0-9]\+/$f/" "$file"
 echo "PASS_MIN_DAYS changed to 7."
 # SECTION 3
 # EDITING THE COMMON-PASSWORD FILE
-sed -i "s/minlen//g ; s/minclass//g ; s/maxrepeat//g ; s/maxclassrepeat//g ; s/lcredit//g ; s/ucredit//g ; s/dcredit//g ; s/ocredit//g ; s/difok//g ; s/remember//g" /etc/pam.d/common-password #deleting all the current stuff
-sed -i 's/[[:space:]]*$//' /etc/pam.d/common-password
+nl="password [success=1 default=ignore] pam_unix.so obscure sha512 minlen=14 minclass=4 maxrepeat=7 lcredit=1 ocredit=1 ucredit=1 dcredit=1 difok=5 remember=6"
+sed -i '1s/^[^#]*$/'"$n1"'/' /etc/pam.d/common-password
+
