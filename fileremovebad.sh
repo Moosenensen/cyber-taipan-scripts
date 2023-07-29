@@ -1,17 +1,17 @@
 #!/bin/bash
 echo "Sound Files (y/n)"
 read response
-if [[ "$response" == [Yy] ]]; then
+if [[ "$response" == ['y'] ]]; then
   mediasound='1'
 fi
 echo "Video Files (y/n)"
 read response
-if [[ "$response" == [Yy] ]]; then
+if [[ "$response" == ['y'] ]]; then
   mediasvideo='1'
 fi
 echo "Image Files (y/n)"
 read response
-if [[ "$response" == [Yy] ]]; then
+if [[ "$response" == ['y'] ]]; then
   mediaimage='1'
 fi
 if [[mediasound='1']]; do
