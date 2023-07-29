@@ -1,5 +1,5 @@
-#regex. posix- extend -regextype find command
 #!/bin/bash
+#regex. posix- extend -regextype find command
 #TODO: Fix Find command
 #finds text files music files and video files and provides an option to delete them
 echo "Delete Music? [y/n] "
