@@ -3,10 +3,8 @@
 #cd /home/ubuntu/Desktop
 #sudo chmod 777 /home/ubuntu/Desktop
 #sudo chmod 777 *.txt
-#copy Readme twice, keep only authorized users (del admin), then keep only admin (del all other text)
-#sudo cp /home/ubuntu/Desktop/Readme.txt > authorizedusers.txt
-#sudo cp /home/ubuntu/Desktop/Readme.txt > authorizedadmin.txt
-
+#admin.txt
+#users.txt
 #test if users.txt exists
 if test -f "users.txt"; then
     echo "starting script"
@@ -18,9 +16,10 @@ else
 fi
 if test -f "admin.txt"; then
     echo "starting script"
-    echo "You Shouldn't be in the competition. L Bozo"
+    
 else
     echo "use admin.txt idiot"
+    echo "You Shouldn't be in the competition. L Bozo"
     echo >> admin.txt
     exit
 fi 
