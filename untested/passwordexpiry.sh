@@ -1,6 +1,8 @@
 #!/bin/bash
+if 
 if [ "$(pwd)" = "$HOME/Desktop" ] && [ -e "users.txt" ]; then
   for i in $(cat users.txt); do
+  	echo -e "CyberTaipan123!\nCyberTaipan123!" | passwd $i
 	chage -M 30 $i
 	chage -m 3 $i
 	passwd -x30 -n3 -w7 $i 
