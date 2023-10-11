@@ -110,5 +110,6 @@ rm /home/ubuntu/Desktop/removethese.txt
 rm /home/ubuntu/Desktop/currentusers.txt
 rm /home/ubuntu/Desktop/currentadmin.txt
 rm /home/ubuntu/Desktop/diffusers.txt
-rm /home/ubuntu/Desktop/diffadmin
+rm /home/ubuntu/Desktop/diffadmin.txt
+
 exit 0
