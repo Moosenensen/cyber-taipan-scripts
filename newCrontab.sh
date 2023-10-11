@@ -2,8 +2,10 @@
 for user in $(getent passwd | cut -f1 -d: )
 do
 
+# Run as root!
 echo $user
-echo sudo crontab -u $user -l
+cronresults=sudo crontab -u $user -l
+echo $cronresults
 echo ' '
 
 done
