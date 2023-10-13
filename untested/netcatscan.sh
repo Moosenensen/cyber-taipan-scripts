@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+	echo "This script must be run as root."
+ 	exit 0
+fi
 if [ "$(pwd)" = "$HOME/Desktop" ]; then
 	if [ -z "$(which netcat)" ]; then
 		echo "Netcat is not installed."
